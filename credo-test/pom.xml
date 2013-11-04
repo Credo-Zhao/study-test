@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.credo</groupId>
+	<artifactId>credo-test</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>credo-test code</name>
+	<url>http://my.oschina.net/zhaoqian/blog</url>
+	<description>Never Never Never Give Up!</description>
+	<organization>
+		<name>Thanks for OSChina!</name>
+		<url>http://my.oschina.net/zhaoqian/blog</url>
+	</organization>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.build.timestamp.format>yyyyMMdd'T'HHmmss</maven.build.timestamp.format>
+		<buildNumber>${maven.build.timestamp}</buildNumber>
+		<version.xdocreport>1.0.2</version.xdocreport>
+	</properties>
+
+	<dependencies>
+		<!-- XDocReport https://code.google.com/p/xdocreport/ -->
+		<!-- Document Dependency:If you wish use MS Word docx : -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.document.docx</artifactId>
+			<version>${version.xdocreport}</version>
+		</dependency>
+
+		<!-- Document Dependency:If you wish use MS PowerPoint pptx : -->
+		<!-- <dependency> <groupId>fr.opensagres.xdocreport</groupId> <artifactId>fr.opensagres.xdocreport.document.pptx</artifactId> 
+			<version>${version.xdocreport}</version> </dependency> -->
+
+		<!-- Document Dependency:If you wish use OpenOffice odt : -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.document.odt</artifactId>
+			<version>${version.xdocreport}</version>
+		</dependency>
+
+		<!-- Template Dependency: If you wish use Freemarker : -->
+		<!-- <dependency> <groupId>fr.opensagres.xdocreport</groupId> <artifactId>fr.opensagres.xdocreport.template.freemarker</artifactId> 
+			<version>${version.xdocreport}</version> </dependency> -->
+
+		<!-- Template Dependency:If you wish use Velocity : -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.template.velocity</artifactId>
+			<version>${version.xdocreport}</version>
+		</dependency>
+
+		<!-- Converter Dependency:If you wish convert docx 2 PDF/XHTML by using 
+			Apache POI + iText : -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
+			<version>${version.xdocreport}</version>
+		</dependency>
+
+		<!-- Converter Dependency:If you wish convert docx 2 PDF/XHTML by using 
+			docx4j + XSL-FO and FOP: -->
+		<!-- <dependency> <groupId>fr.opensagres.xdocreport</groupId> <artifactId>fr.opensagres.xdocreport.converter.docx.docx4j</artifactId> 
+			<version>${version.xdocreport}</version> </dependency> -->
+
+		<!-- Converter Dependency:If you wish convert odt 2 PDF/XHTML : -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.converter.odt.odfdom</artifactId>
+			<version>${version.xdocreport}</version>
+		</dependency>
+		<!-- HTTP Components -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.2.5</version>
+		</dependency>
+		<!-- base64 -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<!-- json -->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+	</dependencies>
+
+</project>
