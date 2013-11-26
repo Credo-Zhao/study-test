@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<userinfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<id>110</id>
+	<name>Credo</name>
+	<address>China BeiJing</address>
+	<job>programmer</job>
+	<overinfos>
+		<overinfo>
+			<hobby>Accompany my girlfriend.</hobby>
+			<!--开始日期 dateTime-->
+			<beginDate>2009-06-02T12:00:00</beginDate>
+			<!--结束日期 dateTime-->
+			<endDate>2109-06-02T12:00:00</endDate>
+		</overinfo>
+		<overinfo>
+			<hobby>Write some code.</hobby>
+			<!--开始日期 dateTime-->
+			<beginDate>2009-06-02T12:00:00</beginDate>
+			<!--结束日期 dateTime-->
+			<endDate>2029-06-02T12:00:00</endDate>
+		</overinfo>
+	</overinfos>
+</userinfo>
