@@ -16,8 +16,16 @@ import org.apache.commons.io.IOUtils;
 import org.credo.jaxb.model.Overinfo;
 import org.credo.jaxb.model.Userinfo;
 
-public class MarshalUtil {
+/**
+ * marshal对象和unmarshal对象都是由JAXBContext创建.所以一开始需要初始化JAXBContext.
+ * @author Credo
+ */
+public class JAXBUtil {
 
+	/**
+	 * 生成xml文件的二进制数据
+	 * @param obj 对象
+	 */
 	public static byte[] marshal(Object obj) throws JAXBException {
 
 		JAXBContext context = JAXBCache.instance().getJAXBContext(obj.getClass());
@@ -29,6 +37,11 @@ public class MarshalUtil {
 		return result;
 	}
 
+	/**
+	 * @param data xml stream
+	 * @param classe 类
+	 * @return jaxb生成xml的java 类对象
+	 */
 	public static Object unmarshal(byte[] data, Class<?> classe) throws JAXBException {
 
 		JAXBContext context = JAXBCache.instance().getJAXBContext(classe);
@@ -38,6 +51,11 @@ public class MarshalUtil {
 		return obj;
 	}
 
+	/**
+	 * @param data xml stream
+	 * @param classe 类
+	 * @return jaxb生成xml的java 类对象
+	 */
 	public static Object unmarshal(InputStream in, Class<?> classe) throws JAXBException, IOException {
 
 		JAXBContext context = JAXBCache.instance().getJAXBContext(classe);
@@ -61,9 +79,9 @@ public class MarshalUtil {
 		list.add(e1);
 		userinfo.setOverinfos(list);
 
-		byte[] b = MarshalUtil.marshal(userinfo);
+		byte[] b = JAXBUtil.marshal(userinfo);
 		System.out.println(new String(b));
-		userinfo = (Userinfo) MarshalUtil.unmarshal(b, Userinfo.class);
+		userinfo = (Userinfo) JAXBUtil.unmarshal(b, Userinfo.class);
 
 		System.out.println(userinfo.getOverinfos().get(0).getHobby());
 

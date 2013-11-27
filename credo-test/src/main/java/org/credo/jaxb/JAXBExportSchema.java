@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2007 Beijing Shiji Kunlun Software Co., Ltd. All Rights Reserved.
- * $Id$
- */
-
 package org.credo.jaxb;
 
 import java.io.File;
@@ -35,9 +30,6 @@ public class JAXBExportSchema {
 		{
 			ex.printStackTrace();
 		}
-		// JaxbContext jct =
-		// JettisonMappedContext.newInstance(Reservation.class).generateSchema(new
-		// Resolver());
 	}
 }
 

@@ -45,7 +45,7 @@ public class Userinfo implements Serializable{
 	@Length(max = 50)
 	private String job;
 	
-	@XmlElementWrapper(name = "Overinfos")
+	@XmlElementWrapper(name = "overinfos")
 	@OneToMany(cascade = CascadeType.ALL)
 	@XmlElements(value = { @XmlElement(name = "overinfo", type = Overinfo.class) })
 	private List<Overinfo> overinfos;
