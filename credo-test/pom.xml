@@ -12,11 +12,24 @@
 		<url>http://my.oschina.net/zhaoqian/blog</url>
 	</organization>
 
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>local private nexus</name>
+			<url>http://maven.oschina.net/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyyMMdd'T'HHmmss</maven.build.timestamp.format>
 		<buildNumber>${maven.build.timestamp}</buildNumber>
-		<version.xdocreport>1.0.2</version.xdocreport>
+		<version.xdocreport>1.0.3</version.xdocreport>
 	</properties>
 
 	<dependencies>

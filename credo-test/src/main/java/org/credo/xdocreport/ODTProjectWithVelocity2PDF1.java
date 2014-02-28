@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import org.odftoolkit.odfdom.converter.pdf.ITextFontRegistry;
 import org.odftoolkit.odfdom.converter.pdf.PdfConverter;
 import org.odftoolkit.odfdom.converter.pdf.PdfOptions;
 import org.odftoolkit.odfdom.doc.OdfTextDocument;
@@ -44,30 +43,30 @@ public class ODTProjectWithVelocity2PDF1 {
 			OutputStream out = new FileOutputStream(new File("E:\\temp\\shiji\\ODTProjectWithVelocity_Out.pdf"));
 			PdfOptions options = PdfOptions.create();
 
-			options.fontProvider(new IFontProvider() {
-
-				public Font getFont(String familyName, String encoding, float size, int style, Color color) {
-					try
-					{
-						System.out.println("familyName:"+familyName);
-						if ( familyName.equals("Arial") )
-						{
-							// C:/Windows/Fonts/msyh.ttf
-							BaseFont bfChinese = BaseFont.createFont("E:/font/msyh.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-							Font fontChinese = new Font(bfChinese, size, style, color);
-							if ( familyName != null )
-								fontChinese.setFamily(familyName);
-							return fontChinese;
-						} else
-							return ITextFontRegistry.getRegistry().getFont(familyName, encoding, size, style, color);
-					}
-					catch ( Throwable e )
-					{
-						e.printStackTrace();
-						return ITextFontRegistry.getRegistry().getFont(familyName, encoding, size, style, color);
-					}
-				}
-			});
+//			options.fontProvider(new IFontProvider() {
+//
+//				public Font getFont(String familyName, String encoding, float size, int style, Color color) {
+//					try
+//					{
+//						System.out.println("familyName:"+familyName);
+//						if ( familyName.equals("Arial") )
+//						{
+//							// C:/Windows/Fonts/msyh.ttf
+//							BaseFont bfChinese = BaseFont.createFont("E:/font/msyh.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+//							Font fontChinese = new Font(bfChinese, size, style, color);
+//							if ( familyName != null )
+//								fontChinese.setFamily(familyName);
+//							return fontChinese;
+//						} else
+//							return ITextFontRegistry.getRegistry().getFont(familyName, encoding, size, style, color);
+//					}
+//					catch ( Throwable e )
+//					{
+//						e.printStackTrace();
+//						return ITextFontRegistry.getRegistry().getFont(familyName, encoding, size, style, color);
+//					}
+//				}
+//			});
 			PdfConverter.getInstance().convert(document, out, options);
 			System.out.println("Over");
 		} catch (IOException e) {
