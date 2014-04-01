@@ -1,5 +1,6 @@
-﻿﻿<?xml version="1.0" encoding="utf-8"?>
-<reservation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<reservation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<resort>FSDH2</resort>
 	<address>12 The High Street1</address>
 	<gender>U</gender>
@@ -81,79 +82,79 @@
 	<rate_desc>Rack Rate</rate_desc>
 	<packages>
 		<package>
-			<!--package显示名称-->
+			<!--package显示名称 -->
 			<code>BRKF</code>
-			<!--房价代码-->
+			<!--房价代码 -->
 			<rateCode></rateCode>
-			<!--附加到预订中package的数量-->
+			<!--附加到预订中package的数量 -->
 			<quantity>1</quantity>
-			<!--开始日期-->
+			<!--开始日期 -->
 			<beginDate>2004-06-02T12:00:00</beginDate>
-			<!--结束日期-->
+			<!--结束日期 -->
 			<endDate>2004-06-02T12:00:00</endDate>
-			<!--排除package数量-->
+			<!--排除package数量 -->
 			<qtyExcluded>1</qtyExcluded>
-			<!--package价格的计算公式-->
+			<!--package价格的计算公式 -->
 			<formula></formula>
-			<!--package发送频率-->
+			<!--package发送频率 -->
 			<postingRhythm>D</postingRhythm>
-			<!--package组-->
+			<!--package组 -->
 			<group></group>
-			<!--package配置规则-->
+			<!--package配置规则 -->
 			<calculationRule>P</calculationRule>
-			<!--是否在package中显示账单-->
+			<!--是否在package中显示账单 -->
 			<posAccountYN>Y</posAccountYN>
-			<!--是否在package中显示下一天-->
+			<!--是否在package中显示下一天 -->
 			<posNextDayYN>Y</posNextDayYN>
-			<!--短描述-->
+			<!--短描述 -->
 			<shortDescription>Breakfast</shortDescription>
 		</package>
 	</packages>
 	<fixedCharges>
 		<fixedCharge>
-			<!--交易代码-->
+			<!--交易代码 -->
 			<trxCode>8350</trxCode>
-			<!--发送频率-->
+			<!--发送频率 -->
 			<frequency>D</frequency>
-			<!--项目数量-->
+			<!--项目数量 -->
 			<quantity>1</quantity>
-			<!--项目单价-->
+			<!--项目单价 -->
 			<price>10</price>
-			<!--开始日期-->
+			<!--开始日期 -->
 			<beginDate>2004-06-02T12:00:00</beginDate>
-			<!--结束日期-->
+			<!--结束日期 -->
 			<endDate>2004-06-02T12:00:00</endDate>
-			<!--描述-->
+			<!--描述 -->
 			<description>Adj.- Room Tax </description>
 		</fixedCharge>
 	</fixedCharges>
 	<rates>
 		<rate>
-			<!--当天日期-->
+			<!--当天日期 -->
 			<reservationDate>2004-06-02T12:00:00</reservationDate>
-			<!--房价代码-->
+			<!--房价代码 -->
 			<rateCode>RACK</rateCode>
-			<!--金额-->
+			<!--金额 -->
 			<rateAmount>472.5</rateAmount>
-			<!--房号-->
+			<!--房号 -->
 			<room>1516</room>
-			<!--成年人数量-->
+			<!--成年人数量 -->
 			<adults>2</adults>
-			<!--儿童数量-->
+			<!--儿童数量 -->
 			<children>3</children>
-			<!--折扣金额-->
+			<!--折扣金额 -->
 			<discountAmt></discountAmt>
-			<!--折扣金额百分比-->
+			<!--折扣金额百分比 -->
 			<discountPrcnt>10</discountPrcnt>
-			<!--市场代码-->
+			<!--市场代码 -->
 			<marketCode>LTRAN</marketCode>
-			<!--预订来源-->
+			<!--预订来源 -->
 			<sourceCode>GD</sourceCode>
-			<!--是否固定利率-->
+			<!--是否固定利率 -->
 			<fixedRateYN>N</fixedRateYN>
-			<!--房型代码-->
+			<!--房型代码 -->
 			<roomType>TK</roomType>
-			<!--预订房型代码-->
+			<!--预订房型代码 -->
 			<roomTypeRTC>TD</roomTypeRTC>
 		</rate>
 	</rates>
