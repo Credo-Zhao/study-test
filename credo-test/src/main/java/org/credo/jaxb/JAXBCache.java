@@ -8,27 +8,26 @@ import javax.xml.bind.JAXBException;
 
 public final class JAXBCache {
 
-	private static final JAXBCache instance = new JAXBCache();
+    private static final JAXBCache instance = new JAXBCache(); 
 
-	private final ConcurrentMap<String, JAXBContext> contextCache = new ConcurrentHashMap<String, JAXBContext>();
+    private final ConcurrentMap<String, JAXBContext> contextCache = new ConcurrentHashMap<String, JAXBContext>();
 
-	private JAXBCache() {
+    private JAXBCache() {
 
+    }
+
+    public static JAXBCache instance() {
+
+	return instance;
+    }
+
+    JAXBContext getJAXBContext(Class<?> clazz) throws JAXBException {
+
+	JAXBContext context = contextCache.get(clazz.getName());
+	if (context == null) {
+	    context = JAXBContext.newInstance(clazz);
+	    contextCache.putIfAbsent(clazz.getName(), context);
 	}
-
-	public static JAXBCache instance() {
-
-		return instance;
-	}
-
-	JAXBContext getJAXBContext(Class<?> clazz) throws JAXBException {
-
-		JAXBContext context = contextCache.get(clazz.getName());
-		if ( context == null )
-		{
-			context = JAXBContext.newInstance(clazz);
-			contextCache.putIfAbsent(clazz.getName(), context);
-		}
-		return context;
-	}
+	return context;
+    }
 }
