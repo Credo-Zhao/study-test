@@ -27,6 +27,10 @@ public class Overinfo implements Serializable {
 
 	private static final long serialVersionUID = 2579971237985854291L;
 
+	public static void main(String[] args) {
+
+		System.out.println(Overinfo.class.getSimpleName());
+	}
 	@XmlTransient
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
