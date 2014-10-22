@@ -69,16 +69,14 @@
 			<version>${version.xdocreport}</version>
 		</dependency>
 
-		<!-- Converter Dependency:If you wish convert docx 2 PDF/XHTML by using 
-			Apache POI + iText : -->
+		<!-- Converter Dependency:If you wish convert docx 2 PDF/XHTML by using Apache POI + iText : -->
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
 			<artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
 			<version>${version.xdocreport}</version>
 		</dependency>
 
-		<!-- Converter Dependency:If you wish convert docx 2 PDF/XHTML by using 
-			docx4j + XSL-FO and FOP: -->
+		<!-- Converter Dependency:If you wish convert docx 2 PDF/XHTML by using docx4j + XSL-FO and FOP: -->
 		<!-- <dependency> <groupId>fr.opensagres.xdocreport</groupId> <artifactId>fr.opensagres.xdocreport.converter.docx.docx4j</artifactId> 
 			<version>${version.xdocreport}</version> </dependency> -->
 
@@ -242,6 +240,7 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
+
 	</dependencies>
 
 </project>

@@ -13,6 +13,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.edit.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDFont;
+import org.apache.pdfbox.pdmodel.font.PDTrueTypeFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.util.PDFTextStripper;
 
@@ -40,9 +41,9 @@ public class test1
 		String fileName = "test.pdf";
 		File sourceFile = new File(workingDir, fileName);
 
-		// input some filed
-		PDFont font = PDType1Font.HELVETICA_BOLD;
-
+		// input some filed simfang.ttf
+		PDFont font = PDType1Font.TIMES_ITALIC;
+		//PDFont font = PDTrueTypeFont.loadTTF(document, "C:\\Windows\\Fonts\\simfang.ttf");
 		// Start a new content stream which will "hold" the to be created
 		// content
 		PDPageContentStream contentStream = new PDPageContentStream(document, page);
@@ -67,7 +68,6 @@ public class test1
 
 		// Save the newly created document
 		document.save(sourceFile);
-		
 		// finally make sure that the document is properly
 		// closed.
 		document.close();
