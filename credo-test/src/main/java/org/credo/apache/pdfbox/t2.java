@@ -54,7 +54,10 @@ public class t2
 		// finally make sure that the document is properly
 		// closed.
 		document.close();
-
+		
+		byte[] data = null;
+		PdfUtil p=new PdfUtil(data);
+		
 	}
 
 }
