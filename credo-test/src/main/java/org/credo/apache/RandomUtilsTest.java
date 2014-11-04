@@ -18,6 +18,9 @@ public class RandomUtilsTest {
 		String num4 = RandomStringUtils.random(6, true, true);
 		System.out.println(num4);
 		
+		String aa="1234567";
+		System.out.println(aa.substring(3));
+		
 				
 	}
 }

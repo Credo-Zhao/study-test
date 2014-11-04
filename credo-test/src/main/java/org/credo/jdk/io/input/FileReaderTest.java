@@ -10,7 +10,7 @@ public class FileReaderTest
 {
 	public static void main(String[] args) throws IOException
 	{
-		FileReader fr = new FileReader("D://test.txt");
+		FileReader fr = new FileReader("D://周报.txt");
 		// 创建一个长度为32的字符数组
 		char[] cbuf = new char[32];
 		int hasRead = 0;
