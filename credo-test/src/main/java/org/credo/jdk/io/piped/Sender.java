@@ -10,7 +10,8 @@ public class Sender implements Runnable
 	@Override
 	public void run()
 	{
-		writeShortMessage();
+		//writeShortMessage();
+		writeLongMessage();
 	}
 	
 	// 向“管道输出流”中写入一则较简短的消息："this is a short message"   
@@ -31,7 +32,7 @@ public class Sender implements Runnable
 	public void writeLongMessage() {
 		StringBuilder sb = new StringBuilder();  
         // 通过for循环写入1020个字节  
-        for (int i=0; i<102; i++)  
+        for (int i=0; i<222; i++)  
             sb.append("0123456789");  
         // 再写入26个字节。  
         sb.append("abcdefghijklmnopqrstuvwxyz");  
