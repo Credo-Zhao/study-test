@@ -1,9 +1,12 @@
 package org.credo.jaxws.study1.simpleRequest.webservicelog;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Set;
 
 import javax.xml.namespace.QName;
+import javax.xml.soap.MimeHeader;
+import javax.xml.soap.MimeHeaders;
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 import javax.xml.ws.handler.MessageContext;
@@ -23,6 +26,19 @@ public class LogHandler implements SOAPHandler<SOAPMessageContext>
 	{
 
 		SOAPMessage msg = context.getMessage();
+		MimeHeaders mimeHeaders=msg.getMimeHeaders();
+		Iterator iter = mimeHeaders.getAllHeaders();
+		while (iter.hasNext())
+		{
+			 MimeHeader mimeHeader = (MimeHeader)iter.next();             
+			 String headerName = mimeHeader.getName(); 
+			 System.out.println(headerName);
+			 String[] headerValues = mimeHeaders.getHeader(headerName);     
+			 System.out.println("headerValues:"+headerValues.toString());
+			 for(String str:headerValues) {
+				 System.out.println(str);
+			 }
+		}
 		try
 		{
 			msg.writeTo(System.out);
