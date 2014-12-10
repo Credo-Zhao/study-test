@@ -37,7 +37,6 @@ public class BufferedOutputStreamTest
 		// 将“换行符\n”写入到输出流中
 		out.write('\n');
 
-		// TODO!
 		 //out.flush();
 
 		//readUserInput();

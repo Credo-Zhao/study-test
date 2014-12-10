@@ -26,7 +26,6 @@ public class TimeServerThreadPoolPublisher extends ThreadPoolExecutor
 	{
 		super(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(
 				corePoolSize));
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

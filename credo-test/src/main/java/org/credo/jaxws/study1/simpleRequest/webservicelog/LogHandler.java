@@ -63,7 +63,6 @@ public class LogHandler implements SOAPHandler<SOAPMessageContext>
 	public boolean handleFault(SOAPMessageContext context)
 	{
 
-		// TODO Auto-generated method stub
 		return true;
 	}
 
@@ -76,7 +75,6 @@ public class LogHandler implements SOAPHandler<SOAPMessageContext>
 	public void close(MessageContext context)
 	{
 
-		// TODO Auto-generated method stub
 
 	}
 
@@ -88,7 +86,6 @@ public class LogHandler implements SOAPHandler<SOAPMessageContext>
 	public Set<QName> getHeaders()
 	{
 
-		// TODO Auto-generated method stub
 		return null;
 	}
 

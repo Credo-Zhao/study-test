@@ -13,7 +13,6 @@ public class CharArrayWriterTest
 			tesCharArrayWriter();
 		} catch (IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -20,7 +20,6 @@ public class FileReaderTest
 		}
 		
 		FileReaderTest fileReaderTest=new FileReaderTest();
-		//TODO 中文转换问题
 		//System.out.println(new String(fileReaderTest.getBytes(cbuf)));
 		fr.close();
 		// 这些也只是适合英文了.
