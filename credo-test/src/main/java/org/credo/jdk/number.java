@@ -1,5 +1,7 @@
 package org.credo.jdk;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -7,18 +9,9 @@ import java.util.Locale;
 
 public class number {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 
-//		System.out.println(("123123123").matches("^\\d+$"));
-//		System.out.println(("12312aaa3123").matches("^\\d+$"));
-		
-		List<String> list=new ArrayList<String>();
-		System.out.println(list.isEmpty());
-		list.add("");
-		System.out.println(list.isEmpty());
-		
-		List<String> list1=null;
-		System.out.println(list1.isEmpty());
+		System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2014-12-12T17:36:42"));
 	}
 	
 	public void initCountry() {
